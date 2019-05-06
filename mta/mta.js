@@ -1,24 +1,32 @@
-let balance = 500
-let fare = 2.75
-let train = []
+/// create an algorithm that simulates a running train
+// the train will print out a message at every stop
+// --> "this stop is ..."
+// if the stop is the same as the rider's destinantion
+// get off the Atrain// --> "leaving train"
 
-getCard = () => {
-  let amount = prompt('How much do you want to put on the card?')
-  card = parseInt(amount)
-}
+// The train simulation should hit every stop at 3 second intervals
 
-swipe = () => {
-  if (card < fare) {
-    return 'INSUFFICIENT FARE'
-  } else if (card >= fare) {
-    card -= fare
-    train.push(person)
-    return 'GO'
+// write a for loop that prints out every item in that for loop
+
+let STOPS = ['8th ave', '6th ave', '14th street union sq', '3rd ave', '1st ave', 'bedford ave', 'lorimer st', 'graham ave', 'montrose ave', 'morgan ave']
+let dest = prompt ('What is your destination').toLowerCase()
+let div = document.querySelector('#stops')
+
+for (stop of STOPS) {
+  console.log(stop)
+  if (dest == stop) {
+    console.log('LEAVING TRAIN')
+    break
   }
 }
 
-// create a card variable
-// swipe the Card
-// check to see if the card had enough FARE
-// if yes, get on train
-// if no, go take a hike
+// we have stops in an array
+// we have to create a button for each stops
+
+for (stop of STOPS) {
+  let el = document.createElement('button')
+  el.innerText = stop
+  div.appendChild(el)
+}
+
+// controlled flow constructs
